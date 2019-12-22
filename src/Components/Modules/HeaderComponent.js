@@ -6,7 +6,7 @@ const HeaderComponent = props => {
   return (
     <>
       <div className="ui" style={{ marginTop: "0.75rem" }}>
-        <Header as="h1" floated="left" style={{ marginBottom: 0 }}>
+        <Header as="h1" floated="left" style={{ marginBottom: 0, fontSize: '20px' }}>
           {props.title}
         </Header>
         <Header as="div" floated="right" className="horizontal list">

@@ -59,7 +59,6 @@ export default class Profile extends Component {
                         <Image
                           src={profilePicture}
                           onError={(ev) => ev.target.src = defaultProfile}
-                          size="medium"
                           circular
                         />
                         <div className="caption value">{user.name}</div>
@@ -94,7 +93,7 @@ export default class Profile extends Component {
                       <div className="user-info company">
                         <h3
                           className="key"
-                          style={{ marginBottom: 0, textAlign: "center" }}
+                          style={{ marginBottom: '5px', textAlign: "center" }}
                         >
                           Company
                         </h3>
@@ -121,11 +120,11 @@ export default class Profile extends Component {
                   </Grid.Column>
 
                   {/* Profile Meta */}
-                  <Grid.Column width={10}>
+                  <Grid.Column width={10} style={{ borderLeft: '1px solid #E5E5E5' }}>
                     <div className="profile-meta">
                       <div className="user-info address">
                         <h3 className="key" style={{ marginBottom: 0 }}>
-                          Address
+                          Address:
                         </h3>
                         <div className="address-meta">
                           <div className="info-bar">
@@ -152,7 +151,7 @@ export default class Profile extends Component {
                             </div>
                             <div className="value right">{address.zipcode}</div>
                           </div>
-                          <div className="map-box">
+                          <div className="map-box" style={{ marginTop: '15px' }}>
                             <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
                             <div className="lat-long">
                               <span>

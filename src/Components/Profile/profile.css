@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 30px;
+  padding: 40px;
   width: 100%;
   min-height: 100vh;
 }
@@ -7,6 +7,38 @@
   width: 95%;
   margin: 0 auto;
   right: 0;
+}
+.sidebar-menu {
+  display: table;
+  height: 600px;
+  max-height: 600px;
+  background-color: #4252C8 !important;
+  padding: 2em !important;
+}
+.sidebar-menu .list-style {
+  display: table-cell;
+  vertical-align: middle;
+}
+.sidebar-menu .list-style .item {
+  padding: 1em 0 !important;
+}
+.sidebar-menu .list-style .item:first-child {
+  padding-top: 0 !important;
+}
+.sidebar-menu .list-style .item:last-child {
+  padding-bottom: 0 !important;
+}
+.sidebar-menu .list-style .item a {
+  font-size: 1.1em;
+  font-weight: 500;
+  opacity: 0.6;
+}
+.sidebar-menu .list-style .ui.list .item a:hover {
+  color: #ffffff !important;
+}
+.sidebar-menu .list-style .ui.list .item a.active {
+  opacity: 1;
+  font-weight: 600;
 }
 .profile-info {
   padding: 0 25px;
@@ -17,34 +49,43 @@
 .profile-info .profile-avatar img {
   text-align: center;
   margin: 0 auto;
+  width: 190px !important;
 }
 .profile-info .profile-avatar .caption {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .mt-0 { margin-top: 0 !important; }
 .mb-0 { margin-bottom: 0 !important; }
 .mb-28 { margin-bottom: 28px !important; }
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
+.hide { display: none !important; }
+.show { display: block !important; }
+.br-15 { border-radius: 15px !important; }
+.br-20 { border-radius: 20px !important; }
+.br-25 { border-radius: 25px !important; }
 .key {
   color: #a5a5a5 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 500 !important;
 }
 .value {
   color: #545454 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 600 !important;
 }
 .user-info {
   padding: 15px 0;
 }
+.user-info:last-child {
+  padding-bottom: 0 !important;
+}
 .user-info .info-bar {
-  padding: 15px 0;
+  padding: 5px 0;
+}
+.user-info .info-bar:first-child {
+  padding-top: 0;
+}
+.user-info .info-bar:last-child {
+  padding-bottom: 0;
 }
 .info-bar .left {
   display: inline-block;
@@ -74,9 +115,19 @@
 .address-meta .lat-long span {
   font-size: 13px !important;
 }
+.todo-list .ui.cards .header {
+  text-align: center;
+}
+.todo-list .ui.card {
+  border-radius: 15px !important;
+}
+.todo-list .ui.card > .content:first-child,
+.todo-list .ui.cards > .card > .content:first-child {
+  border-radius: 15px 15px 0 0 !important;
+}
 .todo-list .ui.checkbox {
 	display: block;
-	padding: 10px 0;
+	padding: 7px 0;
 }
 .todo-list.pending .ui.checkbox label {
   cursor: text;

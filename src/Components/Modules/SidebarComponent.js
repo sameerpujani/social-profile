@@ -1,42 +1,47 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { List, Segment } from "semantic-ui-react";
+import { Link, matchPath } from "react-router-dom";
+import { List } from "semantic-ui-react";
 
 export default class SidebarComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { id } = this.props;
     return (
-      <Segment inverted>
-        {/* <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" /> */}
-
+      <div className="ui segment sidebar-menu br-25">
         <div className="list-style ">
           <List divided inverted relaxed>
             <List.Item>
               <List.Header>
-                <Link to={`/user/${id}/profile`}>Profile</Link>
+                <ActiveLink to={`/user/${id}/profile`}>Profile</ActiveLink>
               </List.Header>
             </List.Item>
             <List.Item>
               <List.Header>
-                <Link to={`/user/${id}/posts`}>Posts</Link>
+                <ActiveLink to={`/user/${id}/posts`}>Posts</ActiveLink>
               </List.Header>
             </List.Item>
             <List.Item>
               <List.Header>
-                <Link to={`/user/${id}/gallery`}>Gallery</Link>
+                <ActiveLink to={`/user/${id}/gallery`}>Gallery</ActiveLink>
               </List.Header>
             </List.Item>
             <List.Item>
               <List.Header>
-                <Link to={`/user/${id}/todo`}>Todo</Link>
+                <ActiveLink to={`/user/${id}/todo`}>ToDo</ActiveLink>
               </List.Header>
             </List.Item>
           </List>
         </div>
-      </Segment>
+      </div>
     );
   }
+}
+
+const ActiveLink = (props) => {
+  const { pathname } = window.location;
+  let match = matchPath(pathname, {
+      path: props.to,
+      exact: false,
+      strict: false
+  });
+  return <Link className={match ? "active" : "" } to={props.to}> {props.children}</Link>;
 }

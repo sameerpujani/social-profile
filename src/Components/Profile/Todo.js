@@ -54,7 +54,7 @@ export default class Todo extends Component {
                       <Card.Group>
                         <Card fluid>
                           <Card.Content style={{ backgroundColor: "#E1E1E1" }}>
-                            <Card.Header>Todo</Card.Header>
+                            <Card.Header>ToDo</Card.Header>
                           </Card.Content>
                           <Card.Content>
                             {todo_pending.length > 0
