@@ -1,0 +1,115 @@
+.wrapper {
+  padding: 30px;
+  width: 100%;
+  min-height: 100vh;
+}
+.ui.vertical.menu .list-style .item:before {
+  width: 95%;
+  margin: 0 auto;
+  right: 0;
+}
+.profile-info {
+  padding: 0 25px;
+}
+.profile-info .profile-avatar {
+  text-align: center;
+}
+.profile-info .profile-avatar img {
+  text-align: center;
+  margin: 0 auto;
+}
+.profile-info .profile-avatar .caption {
+  margin-top: 10px;
+}
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-28 { margin-bottom: 28px !important; }
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.key {
+  color: #a5a5a5 !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+.value {
+  color: #545454 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+.user-info {
+  padding: 15px 0;
+}
+.user-info .info-bar {
+  padding: 15px 0;
+}
+.info-bar .left {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+}
+.info-bar .right {
+  display: inline-block;
+  width: 60%;
+}
+.info-bar .left span {
+  padding: 0 10px;
+}
+.user-info.address .info-bar .left {
+  width: 20%;
+}
+.user-info.address .info-bar .right {
+  width: 80%;
+}
+.user-info.address .address-meta {
+  padding-left: 40px;
+}
+.lat-long {
+  text-align: right;
+  margin-top: 10px;
+}
+.address-meta .lat-long span {
+  font-size: 13px !important;
+}
+.todo-list .ui.checkbox {
+	display: block;
+	padding: 10px 0;
+}
+.todo-list.pending .ui.checkbox label {
+  cursor: text;
+}
+.todo-list.pending .ui.checkbox label:before, .todo-list.pending .ui.checkbox input {
+  cursor: pointer;
+}
+
+
+/* Posts - Masonry Grid */
+.masonry.grid {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .masonry.grid {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
+
+  .ui.doubling.masonry.grid[class*="three column"] > .column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .masonry.grid {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
